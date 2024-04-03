@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="banner">
+            <video autoplay loop muted plays-inline>
+                <source src="Images/circuit_-_27725 (1080p).mp4" type="video/mp4">
+            </video>
+            <div class="navbar">
+                <img class="logo" src="Images/logo.png">
+                <ul>
+                    <li><a href="Main.html">Home</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="News.html">News</a></li>
+                    <li><a href="Attacks.html">Attacks</a></li>
+                    <li><a href="Complaint.html">Complaint</a></li>
+                    <li><a href="Quiz.html">Quiz</a></li>
+                </ul>
+            </div>
+            <div class = "title">
+                <h2>Quiz</h2>
+            </div>
+  <div class="container5">
+    <form id="quizForm">
+      <div class="question">
+        <p>1. What is phishing?</p>
+        <div class="options">
+          <label><input type="radio" name="q1" value="A type of fishing technique"> A type of fishing technique</label>
+          <label><input type="radio" name="q1" value="A method of catching emails"> A method of catching emails</label>
+          <label><input type="radio" name="q1" value="A fraudulent attempt to obtain sensitive information by disguising as a trustworthy entity"> A fraudulent attempt to obtain sensitive information by disguising as a trustworthy entity</label>
+          <label><input type="radio" name="q1" value="A way to clean your computer's cache"> A way to clean your computer's cache</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>2. Which of the following is a strong password?</p>
+        <div class="options">
+          <label><input type="radio" name="q2" value="123456"> 123456</label>
+          <label><input type="radio" name="q2" value="Password123"> Password123</label>
+          <label><input type="radio" name="q2" value="P@ssw0rd!"> P@ssw0rd!</label>
+          <label><input type="radio" name="q2" value="YourName123"> YourName123</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>3. What is the purpose of antivirus software?</p>
+        <div class="options">
+          <label><input type="radio" name="q3" value="To speed up your computer"> To speed up your computer</label>
+          <label><input type="radio" name="q3" value="To prevent your computer from being infected by malicious software"> To prevent your computer from being infected by malicious software</label>
+          <label><input type="radio" name="q3" value="To delete all files on your computer"> To delete all files on your computer</label>
+          <label><input type="radio" name="q3" value="To automatically update your operating system"> To automatically update your operating system</label>
+        </div>
+      </div>     
+    <div class="question">
+      <p>4. What is a firewall?</p>
+      <div class="options">
+        <label><input type="radio" name="q4" value="A physical wall around a computer server"> A physical wall around a computer server</label>
+        <label><input type="radio" name="q4" value="A barrier that blocks unauthorized access to or from a private network"> A barrier that blocks unauthorized access to or from a private network</label>
+        <label><input type="radio" name="q4" value="A tool used to protect your eyes from computer screen glare"> A tool used to protect your eyes from computer screen glare</label>
+        <label><input type="radio" name="q4" value="A program that enhances internet speed"> A program that enhances internet speed</label>
+      </div>
+    </div>
+    <div class="question">
+      <p>5. What does HTTPS stand for?</p>
+      <div class="options">
+        <label><input type="radio" name="q5" value="HyperText Transfer Protocol Secure"> HyperText Transfer Protocol Secure</label>
+        <label><input type="radio" name="q5" value="High-Tech Email Protection System"> High-Tech Email Protection System</label>
+        <label><input type="radio" name="q5" value="Home Technology Security Protocol"> Home Technology Security Protocol</label>
+        <label><input type="radio" name="q5" value="Hyperlink Transfer and Protection System"> Hyperlink Transfer and Protection System</label>
+      </div>
+    </div>
+    <div class="question">
+      <p>6. Which of the following is NOT a good practice for protecting your online accounts?</p>
+      <div class="options">
+        <label><input type="radio" name="q6" value="Using the same password for multiple accounts"> Using the same password for multiple accounts</label>
+        <label><input type="radio" name="q6" value="Enabling two-factor authentication"> Enabling two-factor authentication</label>
+        <label><input type="radio" name="q6" value="Regularly updating passwords"> Regularly updating passwords</label>
+        <label><input type="radio" name="q6" value="Being cautious of suspicious links and emails"> Being cautious of suspicious links and emails</label>
+      </div>
+    </div>
+    <div class="question">
+      <p>7. What is social engineering?</p>
+      <div class="options">
+        <label><input type="radio" name="q7" value="A technique used to build social networks online"> A technique used to build social networks online</label>
+        <label><input type="radio" name="q7" value="A method of repairing social media profiles"> A method of repairing social media profiles</label>
+        <label><input type="radio" name="q7" value="A psychological manipulation to trick people into giving away confidential information"> A psychological manipulation to trick people into giving away confidential information</label>
+        <label><input type="radio" name="q7" value="A strategy to improve social skills in the workplace"> A strategy to improve social skills in the workplace</label>
+      </div>
+    </div>
+    <p>8. What should you do if you receive an email from an unknown sender with an attachment?</p>
+    <div class="options">
+      <label><input type="radio" name="q8" value="Open the attachment to see what it contains"> Open the attachment to see what it contains</label>
+      <label><input type="radio" name="q8" value="Delete the email immediately"> Delete the email immediately</label>
+      <label><input type="radio" name="q8" value="Forward the email to all your contacts"> Forward the email to all your contacts</label>
+      <label><input type="radio" name="q8" value="Reply to the sender asking for more information"> Reply to the sender asking for more information</label>
+    </div>
+      <button type="button" onclick="calculateScore()">Submit</button>
+    </form>
+    <div id="result" style="display:none;"></div>
+  </div>
+</div>
+
+
+  <script>
+    function calculateScore() {
+      var score = 0;
+      var answers = {
+        q1: "A fraudulent attempt to obtain sensitive information by disguising as a trustworthy entity",
+        q2: "P@ssw0rd!",
+        q3: "To prevent your computer from being infected by malicious software",
+        q4: "A barrier that blocks unauthorized access to or from a private network",
+        q5: "HyperText Transfer Protocol Secure",
+        q6: "Using the same password for multiple accounts",
+        q7: "A psychological manipulation to trick people into giving away confidential information",
+        q8: "Delete the email immediately"
+      };
+
+      for (var i = 1; i <= Object.keys(answers).length; i++) {
+        var radios = document.getElementsByName('q' + i);
+        for (var j = 0; j < radios.length; j++) {
+          if (radios[j].checked) {
+            if (radios[j].value === answers['q' + i]) {
+              score++;
+            }
+            break;
+          }
+        }
+      }
+
+      var resultContainer = document.getElementById('result');
+      resultContainer.style.display = 'block';
+      resultContainer.innerHTML = 'Your score: ' + score + ' out of ' + Object.keys(answers).length;
+    }
+  </script>
+</body>
+</html>
